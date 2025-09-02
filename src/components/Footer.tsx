@@ -94,7 +94,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-4 h-4 text-secondary" />
-                <span>hello@mclancing.com</span>
+                <span>mclancing@proton.com</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-4 h-4 text-secondary" />
@@ -102,7 +102,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-secondary" />
-                <span>San Francisco, CA</span>
+                <span>Michigan City, IN</span>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 MClancing. All rights reserved.
+              © 2025 MClancing. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => {
