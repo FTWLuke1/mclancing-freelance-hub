@@ -21,7 +21,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      detail: "hello@mclancing.com",
+      detail: "mclancing@proton.com",
       description: "Send us an email and we'll respond within 24 hours",
     },
     {
@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      detail: "San Francisco, CA",
+      detail: "MichiganCity, IN",
       description: "We're based in the heart of Silicon Valley",
     },
     {
