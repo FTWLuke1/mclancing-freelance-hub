@@ -1,6 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { Star, Download, Eye, ArrowRight } from "lucide-react";
 
 const ProductsPreview = () => {
@@ -117,10 +119,12 @@ const ProductsPreview = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-            Browse All Products
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+          <Link to="/products">
+            <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+              Browse All Products
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

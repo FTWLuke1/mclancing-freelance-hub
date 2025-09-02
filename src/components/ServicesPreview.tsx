@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { 
   Code, 
   Palette, 
@@ -18,6 +20,7 @@ const ServicesPreview = () => {
       description: "Custom websites and web applications built with modern technologies",
       color: "text-blue-400",
       bgColor: "bg-blue-400/10",
+      slug: "web-development",
     },
     {
       icon: Palette,
@@ -25,6 +28,7 @@ const ServicesPreview = () => {
       description: "Beautiful, user-centered designs that convert and engage",
       color: "text-purple-400",
       bgColor: "bg-purple-400/10",
+      slug: "ui-ux-design",
     },
     {
       icon: Shield,
@@ -32,6 +36,7 @@ const ServicesPreview = () => {
       description: "Protect your digital assets with comprehensive security solutions",
       color: "text-green-400",
       bgColor: "bg-green-400/10",
+      slug: "cybersecurity",
     },
     {
       icon: PenTool,
@@ -39,6 +44,7 @@ const ServicesPreview = () => {
       description: "Compelling content that tells your story and drives results",
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
+      slug: "content-writing",
     },
     {
       icon: Smartphone,
@@ -46,6 +52,7 @@ const ServicesPreview = () => {
       description: "Native and cross-platform mobile applications",
       color: "text-pink-400",
       bgColor: "bg-pink-400/10",
+      slug: "mobile-development",
     },
     {
       icon: BarChart3,
@@ -53,6 +60,7 @@ const ServicesPreview = () => {
       description: "Strategic marketing campaigns that grow your business",
       color: "text-cyan-400",
       bgColor: "bg-cyan-400/10",
+      slug: "digital-marketing",
     },
   ];
 
@@ -95,10 +103,12 @@ const ServicesPreview = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <Button variant="ghost" className="text-secondary hover:text-secondary-foreground p-0 h-auto font-medium group-hover:translate-x-2 transition-spring">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                <Link to={`/services/${service.slug}`}>
+                  <Button variant="ghost" className="text-secondary hover:text-secondary-foreground p-0 h-auto font-medium group-hover:translate-x-2 transition-spring">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
               </Card>
             );
           })}
@@ -106,10 +116,12 @@ const ServicesPreview = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="premium" size="lg" className="text-lg px-8 py-6">
-            View All Services
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+          <Link to="/services">
+            <Button variant="premium" size="lg" className="text-lg px-8 py-6">
+              View All Services
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -49,13 +51,17 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-              Explore Services
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button variant="hero-outline" size="lg" className="text-lg px-8 py-6">
-              View Portfolio
-            </Button>
+            <Link to="/services">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+                Explore Services
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+            <Link to="/portfolio">
+              <Button variant="hero-outline" size="lg" className="text-lg px-8 py-6">
+                View Portfolio
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
